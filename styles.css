@@ -186,7 +186,7 @@ h1 {
   text-decoration: none;
   border: 1px solid var(--line);
   border-radius: 19px;
-  background: rgba(255,255,255,.72);
+  background: linear-gradient(135deg, rgba(253,252,255,.96), rgba(250,248,253,.96));
   box-shadow: 0 8px 24px rgba(75,46,131,.04);
   transition:
     transform 170ms ease,
@@ -198,26 +198,14 @@ h1 {
 .link:hover,
 .link:focus-visible {
   transform: translateY(-3px);
-  border-color: rgba(75,46,131,.30);
-  background: rgba(255,255,255,.97);
-  box-shadow: 0 16px 32px rgba(75,46,131,.11);
+  color: var(--deep-violet);
+  border-color: rgba(116,84,168,.30);
+  background: linear-gradient(135deg, rgba(236,228,249,.98), rgba(246,234,245,.98));
+  box-shadow: 0 16px 34px rgba(75,46,131,.13);
   outline: none;
 }
 
-.link-featured:hover,
-.link-featured:focus-visible {
-  color: #fff;
-  border-color: transparent;
-  background: linear-gradient(135deg, #563594, #8060b3 58%, #b17da8);
-  box-shadow: 0 18px 38px rgba(75,46,131,.26);
-}
 
-.link-featured {
-  color: #fff;
-  border-color: transparent;
-  background: linear-gradient(135deg, var(--deep-violet), var(--violet) 58%, #a7759c);
-  box-shadow: 0 16px 34px rgba(75,46,131,.22);
-}
 
 .link-left {
   display: flex;
@@ -235,6 +223,7 @@ h1 {
   border-radius: 13px;
   color: var(--deep-violet);
   background: linear-gradient(145deg, rgba(205,187,234,.48), rgba(229,174,203,.25));
+  transition: color 170ms ease, background 170ms ease, box-shadow 170ms ease;
 }
 
 .icon svg {
@@ -258,11 +247,6 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-.link-featured .icon {
-  color: #fff;
-  background: rgba(255,255,255,.15);
-  border: 1px solid rgba(255,255,255,.18);
-}
 
 .link-name {
   font-size: 1rem;
@@ -277,13 +261,23 @@ h1 {
   transition: transform 170ms ease;
 }
 
-.link-featured .arrow {
-  color: #fff;
-}
 
 .link:hover .arrow,
 .link:focus-visible .arrow {
   transform: translate(2px, -2px);
+}
+
+
+.link:hover .icon,
+.link:focus-visible .icon {
+  color: #fff;
+  background: linear-gradient(135deg, var(--deep-violet), var(--violet));
+  box-shadow: 0 8px 18px rgba(75,46,131,.16);
+}
+
+.link:hover .arrow,
+.link:focus-visible .arrow {
+  color: var(--deep-violet);
 }
 
 .link-contact {
